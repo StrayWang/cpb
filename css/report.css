@@ -1,0 +1,318 @@
+/* 举报页面样式 */
+.report-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px);
+}
+
+/* 介绍部分 */
+.report-intro {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.report-intro h1 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.intro-text {
+    color: var(--gray);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 步骤指示器 */
+.report-steps {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-lg) 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.step-content h3 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.step-content p {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* 表单部分 */
+.report-form-section {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: var(--spacing-lg);
+}
+
+.report-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--light-color);
+}
+
+.form-group h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.input-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.required {
+    color: var(--primary-color);
+    margin-left: 4px;
+}
+
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group input[type="date"],
+.input-group select,
+.input-group textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 2px solid var(--light-color);
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.input-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.input-tip {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-top: var(--spacing-xs);
+}
+
+/* 文件上传区域 */
+.upload-area {
+    border: 2px dashed var(--light-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+}
+
+.upload-area input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.upload-text p {
+    margin: var(--spacing-xs) 0;
+    color: var(--gray);
+}
+
+.upload-tip {
+    font-size: 0.9rem;
+}
+
+.upload-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.preview-item {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.preview-item .remove-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+/* 表单操作区 */
+.form-actions {
+    margin-top: var(--spacing-lg);
+}
+
+.agreement {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-color);
+}
+
+.buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.btn-preview,
+.btn-submit {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-preview {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn-submit {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-submit:hover {
+    background: #c0392b;
+}
+
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background: var(--white);
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.modal-header {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray);
+}
+
+.modal-body {
+    padding: var(--spacing-lg);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.modal-footer {
+    padding: var(--spacing-md);
+    border-top: 1px solid var(--light-color);
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--spacing-md);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .report-steps {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-md);
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+} 

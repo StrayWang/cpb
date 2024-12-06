@@ -1,0 +1,245 @@
+/* 成功页面样式 */
+.success-page {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px);
+}
+
+.success-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+/* 成功图标 */
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--success-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin: 0 auto var(--spacing-lg);
+}
+
+/* 标题和编号 */
+.success-card h1 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.report-number {
+    color: var(--gray);
+    margin-bottom: var(--spacing-xl);
+}
+
+.report-number span {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 进度步骤 */
+.progress-steps {
+    display: flex;
+    justify-content: space-between;
+    margin: var(--spacing-xl) 0;
+    position: relative;
+}
+
+.progress-steps::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--light-color);
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    text-align: center;
+}
+
+.step-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-sm);
+    border: 2px solid var(--white);
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.step.active .step-icon {
+    background: var(--success-color);
+    color: var(--white);
+}
+
+.step-label {
+    color: var(--dark-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-xs);
+}
+
+.step-time {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* 提示信息 */
+.notice-box {
+    background: var(--light-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    text-align: left;
+    margin: var(--spacing-xl) 0;
+}
+
+.notice-box h3 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.notice-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.notice-box li {
+    color: var(--gray);
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.notice-box li::before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* 操作按钮 */
+.action-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.action-buttons button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-copy {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn-track {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-home {
+    background: var(--gray);
+    color: var(--white);
+}
+
+/* 紧急提示 */
+.emergency-notice {
+    border-top: 1px solid var(--light-color);
+    padding-top: var(--spacing-lg);
+}
+
+.emergency-notice h3 {
+    color: var(--error-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.emergency-notice p {
+    color: var(--gray);
+    margin-bottom: var(--spacing-md);
+}
+
+.emergency-actions {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+}
+
+.emergency-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    background: var(--error-light);
+    color: var(--error-color);
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.emergency-btn:hover {
+    background: var(--error-color);
+    color: var(--white);
+}
+
+.btn-icon {
+    font-size: 1.5rem;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.btn-text small {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .success-card {
+        padding: var(--spacing-lg);
+        margin: 0 var(--spacing-sm);
+    }
+
+    .progress-steps {
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    .progress-steps::before {
+        display: none;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .emergency-actions {
+        flex-direction: column;
+    }
+} 

@@ -1,0 +1,366 @@
+/* 防骗知识页面样式 */
+.knowledge-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px);
+}
+
+/* 页面头部 */
+.knowledge-header {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.knowledge-header h1 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--gray);
+    margin-bottom: var(--spacing-md);
+}
+
+/* 搜索框 */
+.knowledge-search {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.knowledge-search input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--light-color);
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+}
+
+.knowledge-search button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+/* 快速入口 */
+.quick-access {
+    margin-bottom: var(--spacing-lg);
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.quick-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: transform 0.3s ease;
+}
+
+.quick-card:hover {
+    transform: translateY(-5px);
+}
+
+.quick-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.quick-card h3 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.quick-card p {
+    color: var(--gray);
+}
+
+/* 内容布局 */
+.knowledge-content {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 左侧导航 */
+.knowledge-nav {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+}
+
+.nav-menu {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.nav-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.nav-group h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 2px solid var(--light-color);
+}
+
+.nav-group ul {
+    list-style: none;
+}
+
+.nav-group ul li {
+    margin-bottom: var(--spacing-xs);
+}
+
+.nav-group ul a {
+    color: var(--dark-color);
+    text-decoration: none;
+    display: block;
+    padding: var(--spacing-xs);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+}
+
+.nav-group ul a:hover,
+.nav-group ul a.active {
+    background: var(--light-color);
+    color: var(--primary-color);
+}
+
+/* 右侧内容 */
+.knowledge-main {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.content-section {
+    margin-bottom: var(--spacing-xl);
+}
+
+.content-section h2 {
+    color: var(--dark-color);
+    font-size: 1.8rem;
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--light-color);
+}
+
+/* 文章样式 */
+.knowledge-article {
+    margin-bottom: var(--spacing-lg);
+}
+
+.knowledge-article h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.article-content {
+    line-height: 1.6;
+}
+
+.key-points {
+    background: var(--light-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-md) 0;
+}
+
+.warning-box {
+    background: #fff3cd;
+    border: 1px solid #ffeeba;
+    color: #856404;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    margin: var(--spacing-md) 0;
+}
+
+/* 诈骗类型卡片 */
+.type-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.type-card {
+    background: var(--white);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+}
+
+.type-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.type-icon {
+    font-size: 2rem;
+}
+
+.type-features {
+    list-style: none;
+    margin: var(--spacing-md) 0;
+}
+
+.type-features li {
+    padding-left: var(--spacing-md);
+    position: relative;
+    margin-bottom: var(--spacing-xs);
+}
+
+.type-features li::before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+/* 工具卡片 */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tool-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: var(--box-shadow);
+}
+
+.tool-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* 案例研究 */
+.case-study {
+    background: var(--white);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.case-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+}
+
+.case-tag {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.case-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* 知识测试 */
+.knowledge-test {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.test-intro {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-test {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    margin-top: var(--spacing-md);
+}
+
+/* FAQ部分 */
+.faq-section {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--light-color);
+    padding: var(--spacing-md) 0;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: var(--spacing-md);
+    color: var(--gray);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.icon-arrow {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .icon-arrow {
+    transform: rotate(180deg);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .knowledge-content {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge-nav {
+        position: static;
+        margin-bottom: var(--spacing-md);
+    }
+
+    .type-cards,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+} 

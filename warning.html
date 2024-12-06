@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 诈骗预警，实时预警信息，提前防范诈骗">
+    <title>诈骗预警 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/warning.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="warning-page">
+        <div class="container">
+            <!-- 预警头部 -->
+            <section class="warning-header">
+                <h1>诈骗预警</h1>
+                <p class="subtitle">实时发布最新诈骗预警信息，提前识别风险</p>
+                
+                <!-- 预警统计 -->
+                <div class="warning-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24</span>
+                        <span class="stat-label">今日预警</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">138</span>
+                        <span class="stat-label">本周预警</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">3,567</span>
+                        <span class="stat-label">累计预警</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 紧急预警 -->
+            <section class="emergency-warning">
+                <div class="warning-card urgent">
+                    <div class="warning-badge">紧急预警</div>
+                    <div class="warning-content">
+                        <h2>【紧急】新型"杀猪盘"诈骗手法预警</h2>
+                        <div class="warning-meta">
+                            <span class="time">2024-03-20 10:30</span>
+                            <span class="region">全国范围</span>
+                            <span class="risk-level high">高风险</span>
+                        </div>
+                        <p class="warning-desc">
+                            近期发现新型"杀猪盘"诈骗手法，诈骗分子通过社交软件...
+                        </p>
+                        <div class="warning-actions">
+                            <button class="btn-details">查看详情</button>
+                            <button class="btn-share">分享预警</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 预警筛选 -->
+            <section class="warning-filter">
+                <div class="filter-group">
+                    <select id="typeFilter">
+                        <option value="">诈骗类型</option>
+                        <option value="investment">投资理财</option>
+                        <option value="dating">交友诈骗</option>
+                        <option value="shopping">购物诈骗</option>
+                        <option value="job">求职诈骗</option>
+                    </select>
+                    <select id="regionFilter">
+                        <option value="">地区</option>
+                        <option value="national">全国</option>
+                        <option value="local">本地</option>
+                    </select>
+                    <select id="riskFilter">
+                        <option value="">风险等级</option>
+                        <option value="high">高风险</option>
+                        <option value="medium">中风险</option>
+                        <option value="low">低风险</option>
+                    </select>
+                    <select id="timeFilter">
+                        <option value="24h">24小时内</option>
+                        <option value="7d">7天内</option>
+                        <option value="30d">30天内</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="搜索预警信息...">
+                    <button type="button">搜索</button>
+                </div>
+            </section>
+
+            <!-- 预警列表 -->
+            <section class="warning-list">
+                <!-- 预警卡片示例 -->
+                <div class="warning-card">
+                    <div class="warning-content">
+                        <h3>虚假购物网站诈骗预警</h3>
+                        <div class="warning-meta">
+                            <span class="time">2024-03-19 15:45</span>
+                            <span class="region">广东省</span>
+                            <span class="risk-level medium">中风险</span>
+                        </div>
+                        <p class="warning-desc">
+                            近期出现多个虚假购物网站，以低价商品为诱饵...
+                        </p>
+                        <div class="warning-tags">
+                            <span class="tag">购物诈骗</span>
+                            <span class="tag">虚假网站</span>
+                        </div>
+                        <div class="warning-actions">
+                            <button class="btn-details">查看详情</button>
+                            <button class="btn-share">分享预警</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 更多预警卡片 -->
+            </section>
+
+            <!-- 分页 -->
+            <div class="pagination">
+                <button class="page-btn" disabled>上一页</button>
+                <div class="page-numbers">
+                    <button class="page-number active">1</button>
+                    <button class="page-number">2</button>
+                    <button class="page-number">3</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">10</button>
+                </div>
+                <button class="page-btn">下一页</button>
+            </div>
+
+            <!-- 订阅预警 -->
+            <section class="warning-subscribe">
+                <div class="subscribe-card">
+                    <h2>订阅预警</h2>
+                    <p>及时获取最新预警信息，提前防范风险</p>
+                    <form id="subscribeForm" class="subscribe-form">
+                        <div class="form-group">
+                            <input type="email" placeholder="请输入您的邮箱">
+                            <button type="submit">订阅</button>
+                        </div>
+                        <div class="subscribe-options">
+                            <label>
+                                <input type="checkbox" name="type" value="sms">
+                                短信提醒
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type" value="email">
+                                邮件提醒
+                            </label>
+                            <label>
+                                <input type="checkbox" name="type" value="wechat">
+                                微信提醒
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 预警详情模态框 -->
+    <div class="modal" id="warningModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>预警详情</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- 详情内容将通过JavaScript动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 分享模态框 -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>分享预警</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <button class="share-btn" data-type="wechat">
+                        <i class="share-icon"></i>
+                        微信
+                    </button>
+                    <button class="share-btn" data-type="weibo">
+                        <i class="share-icon">❤️</i>
+                        微博
+                    </button>
+                    <button class="share-btn" data-type="qq">
+                        <i class="share-icon">💙</i>
+                        QQ
+                    </button>
+                    <button class="share-btn" data-type="link">
+                        <i class="share-icon">🔗</i>
+                        复制链接
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/warning.js"></script>
+</body>
+</html> 

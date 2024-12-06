@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 防骗知识库，系统学习防骗知识，提高防骗意识">
+    <title>防骗知识 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/knowledge.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="knowledge-page">
+        <div class="container">
+            <!-- 页面标题和搜索 -->
+            <section class="knowledge-header">
+                <h1>防骗知识库</h1>
+                <p class="subtitle">系统的防骗知识，让您远离诈骗陷阱</p>
+                <div class="knowledge-search">
+                    <input type="text" id="searchInput" placeholder="搜索防骗知识...">
+                    <button type="button" id="searchBtn">搜索</button>
+                </div>
+            </section>
+
+            <!-- 快速入口 -->
+            <section class="quick-access">
+                <div class="quick-grid">
+                    <a href="#basics" class="quick-card">
+                        <i class="icon">📚</i>
+                        <h3>防骗基础</h3>
+                        <p>基本防骗常识</p>
+                    </a>
+                    <a href="#types" class="quick-card">
+                        <i class="icon">🎯</i>
+                        <h3>诈骗类型</h3>
+                        <p>常见诈骗手法</p>
+                    </a>
+                    <a href="#tools" class="quick-card">
+                        <i class="icon">🛠️</i>
+                        <h3>防骗工具</h3>
+                        <p>实用防骗工具</p>
+                    </a>
+                    <a href="#cases" class="quick-card">
+                        <i class="icon">📋</i>
+                        <h3>案例解析</h3>
+                        <p>真实案例分析</p>
+                    </a>
+                </div>
+            </section>
+
+            <!-- 内容区域 -->
+            <div class="knowledge-content">
+                <!-- 左侧导航 -->
+                <aside class="knowledge-nav">
+                    <nav class="nav-menu">
+                        <div class="nav-group">
+                            <h3>防骗基础</h3>
+                            <ul>
+                                <li><a href="#basics-1">防骗意识培养</a></li>
+                                <li><a href="#basics-2">个人信息保护</a></li>
+                                <li><a href="#basics-3">支付安全</a></li>
+                                <li><a href="#basics-4">网络安全</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-group">
+                            <h3>诈骗类型</h3>
+                            <ul>
+                                <li><a href="#type-1">电信诈骗</a></li>
+                                <li><a href="#type-2">网购诈骗</a></li>
+                                <li><a href="#type-3">投资诈骗</a></li>
+                                <li><a href="#type-4">求职诈骗</a></li>
+                                <li><a href="#type-5">交友诈骗</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-group">
+                            <h3>防骗工具</h3>
+                            <ul>
+                                <li><a href="#tool-1">号码查询</a></li>
+                                <li><a href="#tool-2">网址验证</a></li>
+                                <li><a href="#tool-3">安全软件</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav-group">
+                            <h3>案例解析</h3>
+                            <ul>
+                                <li><a href="#case-1">典型案例</a></li>
+                                <li><a href="#case-2">案例分析</a></li>
+                                <li><a href="#case-3">防范建议</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- 右侧内容 -->
+                <div class="knowledge-main">
+                    <!-- 防骗基础 -->
+                    <section id="basics" class="content-section">
+                        <h2>防骗基础</h2>
+                        
+                        <article id="basics-1" class="knowledge-article">
+                            <h3>防骗意识培养</h3>
+                            <div class="article-content">
+                                <p>培养防骗意识是预防诈骗的第一道防线...</p>
+                                <div class="key-points">
+                                    <h4>关键要点：</h4>
+                                    <ul>
+                                        <li>保持警惕心，不轻信陌生人</li>
+                                        <li>对异常情况多加思考</li>
+                                        <li>不贪图小利，谨防诱饵</li>
+                                    </ul>
+                                </div>
+                                <div class="warning-box">
+                                    <h4>注意事项</h4>
+                                    <p>遇到可疑情况及时咨询家人或报警...</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- 更多防骗基础文章 -->
+                    </section>
+
+                    <!-- 诈骗类型 -->
+                    <section id="types" class="content-section">
+                        <h2>诈骗类型</h2>
+                        
+                        <div class="type-cards">
+                            <article class="type-card">
+                                <div class="type-header">
+                                    <i class="type-icon">📱</i>
+                                    <h3>电信诈骗</h3>
+                                </div>
+                                <div class="type-content">
+                                    <p>通过电话、短信等方式实施的诈骗...</p>
+                                    <ul class="type-features">
+                                        <li>冒充公检法</li>
+                                        <li>虚假中奖</li>
+                                        <li>账户异常</li>
+                                    </ul>
+                                </div>
+                                <a href="/knowledge/telecom-fraud" class="btn-more">了解更多</a>
+                            </article>
+                            <!-- 更多诈骗类型卡片 -->
+                        </div>
+                    </section>
+
+                    <!-- 防骗工具 -->
+                    <section id="tools" class="content-section">
+                        <h2>防骗工具</h2>
+                        
+                        <div class="tools-grid">
+                            <div class="tool-card">
+                                <div class="tool-icon">🔍</div>
+                                <h3>号码查询</h3>
+                                <p>查询可疑电话号码的风险等级...</p>
+                                <a href="/tools/number-check" class="btn-tool">立即使用</a>
+                            </div>
+                            <!-- 更多工具卡片 -->
+                        </div>
+                    </section>
+
+                    <!-- 案例解析 -->
+                    <section id="cases" class="content-section">
+                        <h2>案例解析</h2>
+                        
+                        <div class="case-studies">
+                            <article class="case-study">
+                                <div class="case-header">
+                                    <span class="case-tag">电信诈骗</span>
+                                    <span class="case-date">2024-03-20</span>
+                                </div>
+                                <h3>冒充公检法诈骗案例分析</h3>
+                                <div class="case-content">
+                                    <p>案例描述：接到自称是公安局的电话...</p>
+                                    <div class="case-analysis">
+                                        <h4>案例分析</h4>
+                                        <ul>
+                                            <li>诈骗特征识别</li>
+                                            <li>诈骗手法剖析</li>
+                                            <li>防范措施建议</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- 更多案例 -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- 知识测试 -->
+            <section class="knowledge-test">
+                <h2>防骗知识自测</h2>
+                <div class="test-container">
+                    <div class="test-intro">
+                        <p>测试您的防骗知识掌握程度</p>
+                        <button id="startTest" class="btn-test">开始测试</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 常见问题 -->
+            <section class="faq-section">
+                <h2>常见问题</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何识别虚假网购平台？</span>
+                            <i class="icon-arrow">▼</i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>1. 检查网站域名是否正规...</p>
+                            <p>2. 查看平台资质信息...</p>
+                            <p>3. 核实商家信誉评价...</p>
+                        </div>
+                    </div>
+                    <!-- 更多FAQ项目 -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ���识测试模态框 -->
+    <div class="modal" id="testModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>防骗知识测试</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="test-question">
+                    <!-- 测试题目将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/knowledge.js"></script>
+</body>
+</html> 

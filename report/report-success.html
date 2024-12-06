@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 举报成功">
+    <title>举报成功 - 查骗吧</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/report-success.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="success-page">
+        <div class="container">
+            <div class="success-card">
+                <!-- 成功图标 -->
+                <div class="success-icon">✓</div>
+                
+                <!-- 成功信息 -->
+                <h1>举报提交成功</h1>
+                <p class="report-number">举报编号：<span id="reportId">2024032012345</span></p>
+                
+                <!-- 处理进度 -->
+                <div class="progress-steps">
+                    <div class="step active">
+                        <div class="step-icon">1</div>
+                        <div class="step-label">提交举报</div>
+                        <div class="step-time">2024-03-20 12:34</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <div class="step-label">审核中</div>
+                        <div class="step-time">预计24小时内</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <div class="step-label">处理中</div>
+                        <div class="step-time">-</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <div class="step-label">完成处理</div>
+                        <div class="step-time">-</div>
+                    </div>
+                </div>
+
+                <!-- 提示信息 -->
+                <div class="notice-box">
+                    <h3>温馨提示</h3>
+                    <ul>
+                        <li>请保存好您的举报编号，用于后续查询进度</li>
+                        <li>我们会在24小时内完成初步审核</li>
+                        <li>如有新的进展，我们会通过短信通知您</li>
+                        <li>您也可以随时登录平台查看处理进度</li>
+                    </ul>
+                </div>
+
+                <!-- 操作按钮 -->
+                <div class="action-buttons">
+                    <button class="btn-copy" onclick="copyReportId()">复制举报编号</button>
+                    <button class="btn-track" onclick="window.location.href='/report-track'">追踪进度</button>
+                    <button class="btn-home" onclick="window.location.href='/'">返回首页</button>
+                </div>
+
+                <!-- 紧急提示 -->
+                <div class="emergency-notice">
+                    <h3>紧急情况处理</h3>
+                    <p>如果您遭受重大财产损失或遇到紧急情况，建议您：</p>
+                    <div class="emergency-actions">
+                        <a href="tel:110" class="emergency-btn">
+                            <span class="btn-icon">🚔</span>
+                            <span class="btn-text">
+                                <strong>拨打110</strong>
+                                <small>立即报警</small>
+                            </span>
+                        </a>
+                        <a href="tel:96110" class="emergency-btn">
+                            <span class="btn-icon">📞</span>
+                            <span class="btn-text">
+                                <strong>拨打96110</strong>
+                                <small>反诈中心</small>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="../js/report-success.js"></script>
+</body>
+</html> 

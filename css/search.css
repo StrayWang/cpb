@@ -1,0 +1,321 @@
+/* 搜索页面样式 */
+.search-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px); /* 减去header和footer的高度 */
+}
+
+/* 搜索区域 */
+.search-section {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+}
+
+.search-section h1 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 2rem;
+}
+
+/* 搜索类型标签 */
+.search-tabs {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* 搜索框 */
+.search-box {
+    display: flex;
+    gap: var(--spacing-sm);
+    max-width: 800px;
+    margin: 0 auto var(--spacing-md);
+}
+
+.search-box input {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid var(--light-color);
+    border-radius: var(--border-radius);
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-box input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.search-box button {
+    padding: 0 var(--spacing-lg);
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: #c0392b;
+}
+
+/* 搜索提示 */
+.search-tips {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--gray);
+}
+
+.search-tips ul {
+    list-style: none;
+    margin-top: var(--spacing-xs);
+}
+
+.search-tips li {
+    margin-bottom: var(--spacing-xs);
+    padding-left: var(--spacing-md);
+    position: relative;
+}
+
+.search-tips li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 搜索结果区域 */
+.search-results {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.results-stats {
+    color: var(--gray);
+}
+
+/* 结果过滤器 */
+.results-filter {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--light-color);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.filter-group select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+}
+
+/* 结果列表 */
+.result-item {
+    display: flex;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--light-color);
+}
+
+.risk-level {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    color: var(--white);
+    height: fit-content;
+    font-size: 0.9rem;
+}
+
+.risk-level.high {
+    background: var(--primary-color);
+}
+
+.risk-level.medium {
+    background: var(--secondary-color);
+}
+
+.risk-level.low {
+    background: var(--gray);
+}
+
+.result-content {
+    flex: 1;
+}
+
+.result-content h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.result-info {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.result-detail {
+    color: var(--gray);
+    margin-bottom: var(--spacing-sm);
+}
+
+.result-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.result-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.result-actions button {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-detail {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+.btn-report {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+/* 分页控件 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.page-numbers {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.page-numbers span {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    cursor: pointer;
+    border-radius: var(--border-radius);
+}
+
+.page-numbers span.page-current {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.page-btn {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--light-color);
+    background: var(--white);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.page-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 无结果提示 */
+.no-results {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.no-results img {
+    width: 200px;
+    margin-bottom: var(--spacing-md);
+}
+
+.no-results h2 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.no-results ul {
+    list-style: none;
+    margin: var(--spacing-md) 0;
+}
+
+.no-results-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .search-box {
+        flex-direction: column;
+    }
+
+    .results-filter {
+        flex-direction: column;
+    }
+
+    .result-item {
+        flex-direction: column;
+    }
+
+    .result-info {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    .result-actions {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+} 

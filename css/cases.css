@@ -1,0 +1,370 @@
+/* 热门骗局页面样式 */
+.cases-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px);
+}
+
+/* 页面头部 */
+.cases-header {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+.header-content h1 {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--gray);
+}
+
+/* 筛选器 */
+.cases-filter {
+    display: flex;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.filter-group select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    background: var(--white);
+    color: var(--dark-color);
+}
+
+/* 热门案例 */
+.featured-cases {
+    margin-bottom: var(--spacing-lg);
+}
+
+.featured-cases h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.featured-case {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    position: relative;
+}
+
+.case-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.featured-case.warning {
+    border-left: 4px solid var(--primary-color);
+}
+
+.case-stats {
+    display: flex;
+    gap: var(--spacing-md);
+    margin: var(--spacing-sm) 0;
+}
+
+.stat {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* 案例列表 */
+.cases-list {
+    margin-bottom: var(--spacing-lg);
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.case-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-5px);
+}
+
+.case-header {
+    padding: var(--spacing-sm);
+    background: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.case-type {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.case-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.case-content {
+    padding: var(--spacing-md);
+}
+
+.case-title {
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.case-summary {
+    color: var(--gray);
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.5;
+}
+
+.case-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+}
+
+.info-item {
+    text-align: center;
+}
+
+.info-item .label {
+    display: block;
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.info-item .value {
+    color: var(--dark-color);
+    font-weight: 500;
+}
+
+.case-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
+}
+
+.tag {
+    background: var(--light-color);
+    color: var(--gray);
+    padding: 4px 8px;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+}
+
+.case-footer {
+    padding: var(--spacing-sm);
+    border-top: 1px solid var(--light-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-more,
+.btn-share {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-more {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-share {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* 加载更多 */
+.load-more {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+}
+
+.btn-load-more {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--white);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    color: var(--dark-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-load-more:hover {
+    background: var(--light-color);
+}
+
+/* 诈骗趋势 */
+.fraud-trends {
+    margin-bottom: var(--spacing-lg);
+}
+
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.trend-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.trend-chart {
+    height: 200px;
+    margin: var(--spacing-md) 0;
+    /* 图表样式将由JavaScript库处理 */
+}
+
+.trend-list {
+    list-style: none;
+}
+
+.trend-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid var(--light-color);
+}
+
+.trend-count {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+/* 防骗提示 */
+.fraud-tips {
+    margin-bottom: var(--spacing-lg);
+}
+
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.tip-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.tip-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* 分享模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.share-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.share-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-sm);
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--light-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.share-icon {
+    font-size: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .cases-filter {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group select {
+        flex: 1;
+    }
+
+    .case-info {
+        grid-template-columns: 1fr;
+    }
+
+    .trends-grid {
+        grid-template-columns: 1fr;
+    }
+} 

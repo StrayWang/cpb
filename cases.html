@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 热门骗局案例，了解最新诈骗手法，提高防骗意识">
+    <title>热门骗局 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cases.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="cases-page">
+        <div class="container">
+            <!-- 页面标题和筛选器 -->
+            <section class="cases-header">
+                <div class="header-content">
+                    <h1>热门骗局</h1>
+                    <p class="subtitle">最新诈骗手法和典型案例分析</p>
+                </div>
+                
+                <div class="cases-filter">
+                    <div class="filter-group">
+                        <label>诈骗类型：</label>
+                        <select id="typeFilter">
+                            <option value="all">全部类型</option>
+                            <option value="shopping">购物诈骗</option>
+                            <option value="investment">投资理财诈骗</option>
+                            <option value="job">求职招聘诈骗</option>
+                            <option value="dating">交友诈骗</option>
+                            <option value="telecom">电信诈骗</option>
+                            <option value="other">其他诈骗</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>时间范围：</label>
+                        <select id="timeFilter">
+                            <option value="all">全部时间</option>
+                            <option value="7d">最近7天</option>
+                            <option value="30d">最近30天</option>
+                            <option value="90d">最近90天</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>排序方式：</label>
+                        <select id="sortFilter">
+                            <option value="latest">最新发布</option>
+                            <option value="hot">最多查看</option>
+                            <option value="amount">涉案金额</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 热门案例展示 -->
+            <section class="featured-cases">
+                <h2>高发预警</h2>
+                <div class="featured-grid">
+                    <article class="featured-case warning">
+                        <div class="case-badge">紧急预警</div>
+                        <h3>虚假理财App投资诈骗</h3>
+                        <div class="case-stats">
+                            <span class="stat">
+                                <i class="icon">⚠️</i>
+                                最近7天发生52起
+                            </span>
+                            <span class="stat">
+                                <i class="icon">💰</i>
+                                平均损失2.3万元
+                            </span>
+                        </div>
+                        <p class="case-desc">诈骗分子通过虚假投资平台，以高收益为诱饵...</p>
+                        <a href="/case/123" class="btn-detail">查看详情</a>
+                    </article>
+                    <!-- 更多热门案例 -->
+                </div>
+            </section>
+
+            <!-- 案例列表 -->
+            <section class="cases-list">
+                <h2>最新案例</h2>
+                <div class="cases-grid" id="casesList">
+                    <!-- 案例卡片模板 -->
+                    <article class="case-card">
+                        <div class="case-header">
+                            <span class="case-type">购物诈骗</span>
+                            <span class="case-date">2024-03-20</span>
+                        </div>
+                        <h3 class="case-title">虚假购物网站诈骗</h3>
+                        <div class="case-content">
+                            <p class="case-summary">以低价商品为诱饵，收款后不发货或发送假冒伪劣商品...</p>
+                            <div class="case-info">
+                                <div class="info-item">
+                                    <span class="label">涉案金额</span>
+                                    <span class="value">￥3,500</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">发生地点</span>
+                                    <span class="value">广东省</span>
+                                </div>
+                                <div class="info-item">
+                                    <span class="label">举报次数</span>
+                                    <span class="value">28次</span>
+                                </div>
+                            </div>
+                            <div class="case-tags">
+                                <span class="tag">虚假网店</span>
+                                <span class="tag">低价诱饵</span>
+                                <span class="tag">虚假物流</span>
+                            </div>
+                        </div>
+                        <div class="case-footer">
+                            <a href="/case/456" class="btn-more">查看详情</a>
+                            <button class="btn-share">分享案例</button>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- 加载更多 -->
+                <div class="load-more">
+                    <button id="loadMoreBtn" class="btn-load-more">
+                        加载更多案例
+                    </button>
+                </div>
+            </section>
+
+            <!-- 诈骗趋势分析 -->
+            <section class="fraud-trends">
+                <h2>诈骗趋势分析</h2>
+                <div class="trends-grid">
+                    <div class="trend-card">
+                        <h3>本月高发诈骗</h3>
+                        <div class="trend-chart">
+                            <!-- 图表将通过JavaScript动态生成 -->
+                        </div>
+                        <ul class="trend-list">
+                            <li>
+                                <span class="trend-type">购物诈骗</span>
+                                <span class="trend-count">+23%</span>
+                            </li>
+                            <li>
+                                <span class="trend-type">投资诈骗</span>
+                                <span class="trend-count">+15%</span>
+                            </li>
+                            <li>
+                                <span class="trend-type">求职���骗</span>
+                                <span class="trend-count">+12%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="trend-card">
+                        <h3>诈骗金额分布</h3>
+                        <div class="trend-chart">
+                            <!-- 图表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                    <div class="trend-card">
+                        <h3>地区分布</h3>
+                        <div class="trend-chart">
+                            <!-- 图表将通过JavaScript动态生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 防骗提示 -->
+            <section class="fraud-tips">
+                <h2>防骗提示</h2>
+                <div class="tips-container">
+                    <div class="tip-card">
+                        <i class="tip-icon">🔍</i>
+                        <h3>仔细核实</h3>
+                        <p>对方身份、平台资质等信息要多方核实</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="tip-icon">⚠️</i>
+                        <h3>警惕高收��</h3>
+                        <p>切勿轻信高回报、零风险的投资项目</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="tip-icon">🔒</i>
+                        <h3>保护信息</h3>
+                        <p>不轻易泄露个人信息和验证码</p>
+                    </div>
+                    <div class="tip-card">
+                        <i class="tip-icon">📱</i>
+                        <h3>谨慎转账</h3>
+                        <p>对陌生账户转账要提高警惕</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 分享模态框 -->
+    <div class="modal" id="shareModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>分享案例</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="share-options">
+                    <button class="share-btn" data-type="wechat">
+                        <i class="share-icon">📱</i>
+                        微信
+                    </button>
+                    <button class="share-btn" data-type="weibo">
+                        <i class="share-icon">🌐</i>
+                        微博
+                    </button>
+                    <button class="share-btn" data-type="qq">
+                        <i class="share-icon">💬</i>
+                        QQ
+                    </button>
+                    <button class="share-btn" data-type="link">
+                        <i class="share-icon">🔗</i>
+                        复制链接
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/cases.js"></script>
+</body>
+</html> 

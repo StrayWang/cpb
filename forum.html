@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 防骗社区，分享经验，互帮互助">
+    <title>社区论坛 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/forum.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="forum-page">
+        <div class="container">
+            <!-- 论坛头部 -->
+            <section class="forum-header">
+                <div class="forum-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">12,345</span>
+                        <span class="stat-label">社区成员</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5,678</span>
+                        <span class="stat-label">主题帖</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">45,678</span>
+                        <span class="stat-label">回复数</span>
+                    </div>
+                </div>
+                <div class="forum-actions">
+                    <button class="btn-primary" id="newPostBtn">发布主题</button>
+                    <div class="search-box">
+                        <input type="text" placeholder="搜索帖子...">
+                        <button type="button">搜索</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 论坛主体 -->
+            <div class="forum-content">
+                <!-- 左侧版块列表 -->
+                <aside class="forum-sidebar">
+                    <nav class="forum-nav">
+                        <div class="nav-group">
+                            <h3>版块分类</h3>
+                            <ul>
+                                <li class="active">
+                                    <a href="#all">全部主题</a>
+                                    <span class="post-count">1.2k</span>
+                                </li>
+                                <li>
+                                    <a href="#notice">公告通知</a>
+                                    <span class="post-count">23</span>
+                                </li>
+                                <li>
+                                    <a href="#share">经验分享</a>
+                                    <span class="post-count">456</span>
+                                </li>
+                                <li>
+                                    <a href="#help">求助讨论</a>
+                                    <span class="post-count">789</span>
+                                </li>
+                                <li>
+                                    <a href="#news">新闻动态</a>
+                                    <span class="post-count">234</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="nav-group">
+                            <h3>常用功能</h3>
+                            <ul>
+                                <li>
+                                    <a href="#myPosts">我的帖子</a>
+                                </li>
+                                <li>
+                                    <a href="#myReplies">我的回复</a>
+                                </li>
+                                <li>
+                                    <a href="#favorites">我的收���</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+
+                <!-- 右侧帖子列表 -->
+                <div class="forum-main">
+                    <!-- 筛选器 -->
+                    <div class="post-filter">
+                        <div class="filter-tabs">
+                            <button class="tab-btn active">最新发布</button>
+                            <button class="tab-btn">最多回复</button>
+                            <button class="tab-btn">最多查看</button>
+                        </div>
+                        <div class="filter-options">
+                            <select>
+                                <option value="7d">最近7天</option>
+                                <option value="30d">最近30天</option>
+                                <option value="90d">最近90天</option>
+                                <option value="all">全部时间</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 帖子列表 -->
+                    <div class="post-list">
+                        <!-- 置顶帖子 -->
+                        <article class="post-item pinned">
+                            <div class="post-badge">置顶</div>
+                            <div class="post-main">
+                                <h3 class="post-title">
+                                    <a href="/forum/post/1">【公告】社区规范及发帖指南</a>
+                                </h3>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <img src="images/admin-avatar.jpg" alt="管理员">
+                                        管理员
+                                    </span>
+                                    <span class="post-time">2024-03-20</span>
+                                    <span class="post-category">公告通知</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="stat">
+                                    <span class="number">1.2k</span>
+                                    <span class="label">查看</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">45</span>
+                                    <span class="label">回复</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- 普通帖子 -->
+                        <article class="post-item">
+                            <div class="post-main">
+                                <h3 class="post-title">
+                                    <a href="/forum/post/2">分享一次防骗经历，希望大家引以为戒</a>
+                                </h3>
+                                <p class="post-excerpt">
+                                    最近遇到一个自称是某公司HR的电话，声称看到我的简历很感兴趣...
+                                </p>
+                                <div class="post-meta">
+                                    <span class="post-author">
+                                        <img src="images/user-avatar.jpg" alt="用户名">
+                                        用户名
+                                    </span>
+                                    <span class="post-time">2小时前</span>
+                                    <span class="post-category">经验分享</span>
+                                    <div class="post-tags">
+                                        <span class="tag">求职诈骗</span>
+                                        <span class="tag">电话诈骗</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <div class="stat">
+                                    <span class="number">234</span>
+                                    <span class="label">查看</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">12</span>
+                                    <span class="label">回复</span>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 更多帖子 -->
+                    </div>
+
+                    <!-- 分页 -->
+                    <div class="pagination">
+                        <button class="page-btn" disabled>上一页</button>
+                        <div class="page-numbers">
+                            <button class="page-number active">1</button>
+                            <button class="page-number">2</button>
+                            <button class="page-number">3</button>
+                            <span class="page-ellipsis">...</span>
+                            <button class="page-number">10</button>
+                        </div>
+                        <button class="page-btn">下一页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 发帖模态框 -->
+    <div class="modal" id="newPostModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>发布新主题</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="newPostForm" class="post-form">
+                    <div class="form-group">
+                        <label for="postTitle">标题</label>
+                        <input type="text" id="postTitle" required
+                            placeholder="请输入标题（5-50字）">
+                    </div>
+                    <div class="form-group">
+                        <label for="postCategory">版块</label>
+                        <select id="postCategory" required>
+                            <option value="">请选择版块</option>
+                            <option value="share">经验分享</option>
+                            <option value="help">求助讨论</option>
+                            <option value="news">新闻���态</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="postContent">正文</label>
+                        <textarea id="postContent" required
+                            placeholder="请输入正文内容（10-5000字）"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="postTags">标签</label>
+                        <input type="text" id="postTags"
+                            placeholder="输入标签，用逗号分隔（最多5个）">
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">发布主题</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/forum.js"></script>
+</body>
+</html> 

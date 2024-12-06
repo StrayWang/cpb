@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 诈骗信息查询，快速识别可疑信息，远离诈骗风险">
+    <title>诈骗查询 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/search.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="search-page">
+        <div class="container">
+            <!-- 搜索区域 -->
+            <section class="search-section">
+                <h1>诈骗信息查询</h1>
+                <div class="search-tabs">
+                    <button class="tab-btn active" data-type="all">全部</button>
+                    <button class="tab-btn" data-type="phone">电话号码</button>
+                    <button class="tab-btn" data-type="account">账号信息</button>
+                    <button class="tab-btn" data-type="website">网站/APP</button>
+                    <button class="tab-btn" data-type="name">诈骗者信息</button>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="输入电话、账号、网址等信息进行查询..." autocomplete="off">
+                    <button type="submit" id="searchBtn">立即查询</button>
+                </div>
+                <div class="search-tips">
+                    <p>温馨提示：</p>
+                    <ul>
+                        <li>电话号码：支持手机号和固定电话</li>
+                        <li>账号信息：支持QQ、微信、支付宝等账号</li>
+                        <li>网站/APP：输入完整域名或APP名称</li>
+                        <li>诈骗者信息：可输入姓名、昵称等</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 搜索结果区域 -->
+            <section class="search-results" style="display: none;">
+                <div class="results-header">
+                    <h2>查询结果</h2>
+                    <div class="results-stats">
+                        找到相关结果 <span id="resultCount">0</span> 条
+                    </div>
+                </div>
+                
+                <div class="results-filter">
+                    <div class="filter-group">
+                        <label>时间范围：</label>
+                        <select id="timeFilter">
+                            <option value="all">全部时间</option>
+                            <option value="7d">最近7天</option>
+                            <option value="30d">最近30天</option>
+                            <option value="90d">最近90天</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>诈骗类型：</label>
+                        <select id="typeFilter">
+                            <option value="all">全部类型</option>
+                            <option value="shopping">购物诈骗</option>
+                            <option value="investment">投资诈骗</option>
+                            <option value="telecom">电信诈骗</option>
+                            <option value="job">求职诈骗</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="results-list" id="resultsList">
+                    <!-- 结果项模板 -->
+                    <div class="result-item">
+                        <div class="risk-level high">���风险</div>
+                        <div class="result-content">
+                            <h3>购物诈骗 - 虚假购物网站</h3>
+                            <div class="result-info">
+                                <p class="info-item"><strong>诈骗类型：</strong>购物诈骗</p>
+                                <p class="info-item"><strong>举报次数：</strong>52次</p>
+                                <p class="info-item"><strong>最近举报：</strong>2024-03-20</p>
+                            </div>
+                            <div class="result-detail">
+                                <p>涉及虚假购物网站，以超低价格销售商品，收款后不发货或发送假冒伪劣商品...</p>
+                            </div>
+                            <div class="result-meta">
+                                <span class="meta-item">举报时间：2024-03-20</span>
+                                <span class="meta-item">来源：用户举报</span>
+                            </div>
+                        </div>
+                        <div class="result-actions">
+                            <button class="btn-detail">查看详情</button>
+                            <button class="btn-report">我要举报</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分页控件 -->
+                <div class="pagination">
+                    <button class="page-btn" disabled>上一页</button>
+                    <div class="page-numbers">
+                        <span class="page-current">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>...</span>
+                        <span>10</span>
+                    </div>
+                    <button class="page-btn">下一页</button>
+                </div>
+            </section>
+
+            <!-- 无结果提示 -->
+            <section class="no-results" style="display: none;">
+                <div class="no-results-content">
+                    <img src="images/no-results.svg" alt="无查询结果">
+                    <h2>未找到相关信息</h2>
+                    <p>暂时没有查询到相关的诈骗信息，但这并不代表一定安全，建议：</p>
+                    <ul>
+                        <li>检查输入信息是否正确</li>
+                        <li>尝试使用其他相关信息查询</li>
+                        <li>查看防骗知识，提高警惕</li>
+                    </ul>
+                    <div class="no-results-actions">
+                        <a href="/knowledge" class="btn btn-primary">查看防骗知识</a>
+                        <a href="/report" class="btn btn-secondary">我要举报</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/search.js"></script>
+</body>
+</html> 

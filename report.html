@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 骗子举报平台，共同打击网络诈骗">
+    <title>举报骗子 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="report-page">
+        <div class="container">
+            <section class="report-intro">
+                <h1>举报骗子</h1>
+                <p class="intro-text">您的举报将帮助更多人避免被骗。我们承诺保护举报者的隐私安全。</p>
+                
+                <div class="report-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>填写信息</h3>
+                            <p>提供详细的诈���信息</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>提交证据</h3>
+                            <p>上传相关证据材料</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>审核处理</h3>
+                            <p>平台核实并发布警示</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="report-form-section">
+                <form id="reportForm" class="report-form">
+                    <div class="form-group">
+                        <h2>诈骗信息</h2>
+                        
+                        <div class="input-group">
+                            <label for="fraudType">诈骗类型 <span class="required">*</span></label>
+                            <select id="fraudType" name="fraudType" required>
+                                <option value="">请选择诈骗类型</option>
+                                <option value="shopping">购物诈骗</option>
+                                <option value="investment">投资理财诈骗</option>
+                                <option value="job">求职招聘诈骗</option>
+                                <option value="dating">交友诈骗</option>
+                                <option value="telecom">电信诈骗</option>
+                                <option value="other">其他诈骗</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fraudAmount">涉案金额</label>
+                            <input type="number" id="fraudAmount" name="fraudAmount" placeholder="请输入涉案金额（元）">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fraudDate">诈骗发生时间 <span class="required">*</span></label>
+                            <input type="date" id="fraudDate" name="fraudDate" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h2>骗子信息</h2>
+                        
+                        <div class="input-group">
+                            <label for="fraudsterContact">骗子联系方式 <span class="required">*</span></label>
+                            <input type="text" id="fraudsterContact" name="fraudsterContact" 
+                                placeholder="电话号码/QQ/微信/支付宝等" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fraudsterName">骗子姓名/昵称</label>
+                            <input type="text" id="fraudsterName" name="fraudsterName" 
+                                placeholder="骗子使用的姓名或网名">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fraudsterAccount">收款账号</label>
+                            <input type="text" id="fraudsterAccount" name="fraudsterAccount" 
+                                placeholder="银行卡/支付宝/微信等收款账号">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="fraudsterPlatform">诈骗平台/网站</label>
+                            <input type="text" id="fraudsterPlatform" name="fraudsterPlatform" 
+                                placeholder="发生诈骗的平台、网站或APP名称">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h2>诈骗经过</h2>
+                        
+                        <div class="input-group">
+                            <label for="fraudDescription">详细描述 <span class="required">*</span></label>
+                            <textarea id="fraudDescription" name="fraudDescription" 
+                                placeholder="请详细描述诈骗过程，包括如何接触、对方如何行骗等信息..." 
+                                required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h2>证据上传</h2>
+                        
+                        <div class="input-group">
+                            <label>聊天记录截图</label>
+                            <div class="upload-area" id="chatUpload">
+                                <input type="file" multiple accept="image/*" class="file-input">
+                                <div class="upload-text">
+                                    <i class="upload-icon">📤</i>
+                                    <p>点击或拖拽上传聊天记录截图</p>
+                                    <p class="upload-tip">支持jpg、png格式，最多10张</p>
+                                </div>
+                            </div>
+                            <div class="upload-preview" id="chatPreview"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <label>转账凭证</label>
+                            <div class="upload-area" id="transferUpload">
+                                <input type="file" multiple accept="image/*" class="file-input">
+                                <div class="upload-text">
+                                    <i class="upload-icon">📤</i>
+                                    <p>点击或拖拽上传转账凭证</p>
+                                    <p class="upload-tip">支持jpg、png格式，最多5张</p>
+                                </div>
+                            </div>
+                            <div class="upload-preview" id="transferPreview"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h2>举报人信息</h2>
+                        
+                        <div class="input-group">
+                            <label for="reporterContact">联系方式 <span class="required">*</span></label>
+                            <input type="text" id="reporterContact" name="reporterContact" 
+                                placeholder="请留下您的联系方式，方便我们核实情况" required>
+                            <p class="input-tip">您的联系方式仅用于核实举报信息，不会公开显示</p>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="isAnonymous">
+                                <input type="checkbox" id="isAnonymous" name="isAnonymous">
+                                匿名举报
+                            </label>
+                            <p class="input-tip">选择匿名举报后，您的个人信息将不会在平台公开显示</p>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <label class="agreement">
+                            <input type="checkbox" required>
+                            我承诺以上信息真实有效，如有虚假愿承担相应责任
+                        </label>
+                        <div class="buttons">
+                            <button type="button" class="btn-preview">预览举报</button>
+                            <button type="submit" class="btn-submit">提交举报</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- 预览模态框 -->
+    <div class="modal" id="previewModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>举报信息预览</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <!-- 预览内容将通过JavaScript动态填充 -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn-cancel">返回修改</button>
+                <button class="btn-confirm">确认提交</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/report.js"></script>
+</body>
+</html> 

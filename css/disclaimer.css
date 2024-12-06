@@ -1,0 +1,105 @@
+/* 免责声明页面样式 */
+.disclaimer-content {
+    padding: var(--spacing-lg) 0;
+}
+
+.disclaimer-content h1 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+    font-size: 2rem;
+}
+
+.last-updated {
+    color: var(--gray);
+    margin-bottom: var(--spacing-lg);
+    font-style: italic;
+}
+
+/* 重要提示框 */
+.disclaimer-notice {
+    background-color: #fff3cd;
+    border: 1px solid #ffeeba;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.notice-text {
+    color: #856404;
+    font-weight: 500;
+    margin: 0;
+}
+
+.disclaimer-section {
+    margin-bottom: var(--spacing-lg);
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.disclaimer-section h2 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: var(--spacing-xs);
+}
+
+.disclaimer-section p {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.disclaimer-section ul {
+    margin-left: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    list-style-type: disc;
+}
+
+.disclaimer-section li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+/* 联系方式部分特殊样式 */
+.contact-info {
+    background-color: var(--light-color);
+}
+
+.contact-info ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.contact-info li {
+    padding: var(--spacing-xs) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-info li:last-child {
+    border-bottom: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .disclaimer-content {
+        padding: var(--spacing-md) var(--spacing-sm);
+    }
+
+    .disclaimer-content h1 {
+        font-size: 1.75rem;
+    }
+
+    .disclaimer-section {
+        padding: var(--spacing-sm);
+    }
+
+    .disclaimer-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .disclaimer-section ul {
+        margin-left: var(--spacing-sm);
+    }
+} 

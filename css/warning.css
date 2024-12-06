@@ -1,0 +1,335 @@
+/* 预警页面样式 */
+.warning-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--light-color);
+    min-height: calc(100vh - 60px - 200px);
+}
+
+/* 预警头部 */
+.warning-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.warning-header h1 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+    color: var(--gray);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* 预警统计 */
+.warning-stats {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* 紧急预警 */
+.emergency-warning {
+    margin-bottom: var(--spacing-xl);
+}
+
+.warning-card.urgent {
+    border: 2px solid var(--error-color);
+    background: var(--error-light);
+}
+
+.warning-badge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--error-color);
+    color: var(--white);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* 预警筛选 */
+.warning-filter {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.filter-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+}
+
+.filter-group select {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    background: var(--white);
+    min-width: 120px;
+}
+
+.search-box {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.search-box input {
+    padding: var(--spacing-sm);
+    border: 1px solid var(--light-color);
+    border-radius: var(--border-radius);
+    width: 200px;
+}
+
+.search-box button {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+/* 预警卡片 */
+.warning-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: var(--spacing-md);
+    transition: transform 0.3s ease;
+}
+
+.warning-card:hover {
+    transform: translateY(-2px);
+}
+
+.warning-content h2,
+.warning-content h3 {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.warning-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+.risk-level {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.risk-level.high {
+    background: var(--error-light);
+    color: var(--error-color);
+}
+
+.risk-level.medium {
+    background: var(--warning-light);
+    color: var(--warning-color);
+}
+
+.risk-level.low {
+    background: var(--success-light);
+    color: var(--success-color);
+}
+
+.warning-desc {
+    color: var(--dark-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+}
+
+.warning-tags {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-md);
+}
+
+.tag {
+    background: var(--light-color);
+    color: var(--gray);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+.warning-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
+.btn-details,
+.btn-share {
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-details {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-share {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
+
+/* 订阅预警 */
+.warning-subscribe {
+    margin-top: var(--spacing-xl);
+}
+
+.subscribe-card {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.subscribe-card h2 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.subscribe-card p {
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.subscribe-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.subscribe-form .form-group {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.subscribe-form input[type="email"] {
+    flex: 1;
+    padding: var(--spacing-sm);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+.subscribe-form button {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: var(--dark-color);
+    color: var(--white);
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.subscribe-options {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+}
+
+.subscribe-options label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    cursor: pointer;
+}
+
+/* 分享模态框 */
+.share-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+}
+
+.share-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+    background: var(--light-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.share-btn:hover {
+    background: var(--light-hover);
+}
+
+.share-icon {
+    font-size: 1.5rem;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .warning-stats {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+
+    .warning-filter {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .search-box input {
+        flex: 1;
+    }
+
+    .warning-actions {
+        flex-direction: column;
+    }
+
+    .subscribe-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+} 

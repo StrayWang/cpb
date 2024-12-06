@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="查骗吧 - 联系我们，提供反馈，共同打击网络诈骗">
+    <title>联系我们 - 查骗吧</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+    <!-- 复用header -->
+    <header class="main-header">
+        <!-- 与index.html相同的header内容 -->
+    </header>
+
+    <main class="contact-page">
+        <div class="container">
+            <!-- 页面标题 -->
+            <section class="contact-header">
+                <h1>联系我们</h1>
+                <p class="subtitle">如果您有任何问题、建议或合作意向，欢迎通过以下方式与我们联系</p>
+            </section>
+
+            <!-- 联系方式卡片 -->
+            <section class="contact-cards">
+                <div class="contact-card">
+                    <div class="card-icon">📞</div>
+                    <h3>电话咨询</h3>
+                    <p>工作日 9:00-18:00</p>
+                    <div class="contact-info">400-XXX-XXXX</div>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">✉️</div>
+                    <h3>电子邮件</h3>
+                    <p>7*24小时接收邮件</p>
+                    <div class="contact-info">contact@example.com</div>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">💬</div>
+                    <h3>在线客服</h3>
+                    <p>工作日 9:00-22:00</p>
+                    <button class="btn-chat">开始对话</button>
+                </div>
+                <div class="contact-card">
+                    <div class="card-icon">🏢</div>
+                    <h3>公司地址</h3>
+                    <p>欢迎来访交流</p>
+                    <div class="contact-info">广东省深圳市南山区XX大厦</div>
+                </div>
+            </section>
+
+            <!-- 反馈表单 -->
+            <section class="feedback-section">
+                <div class="section-header">
+                    <h2>意见反馈</h2>
+                    <p>您的反馈是我们持续改进的动力</p>
+                </div>
+                
+                <form id="feedbackForm" class="feedback-form">
+                    <div class="form-group">
+                        <label for="feedbackType">反馈类型</label>
+                        <select id="feedbackType" required>
+                            <option value="">请选择反馈类型</option>
+                            <option value="suggestion">产品建议</option>
+                            <option value="bug">问题反馈</option>
+                            <option value="complaint">投诉举报</option>
+                            <option value="cooperation">商务合作</option>
+                            <option value="other">其他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">邮箱</label>
+                            <input type="email" id="email" required placeholder="请输��您的邮箱">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">主题</label>
+                        <input type="text" id="subject" required placeholder="请输入反馈主题">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">反馈内容</label>
+                        <textarea id="message" required placeholder="请详细描述您的反馈内容"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attachments">附件</label>
+                        <div class="file-upload">
+                            <input type="file" id="attachments" multiple accept="image/*,.pdf,.doc,.docx">
+                            <div class="upload-area">
+                                <i class="upload-icon">📎</i>
+                                <span>点击或拖拽文件到此处</span>
+                                <small>支持图片、PDF、Word文档，最大10MB</small>
+                            </div>
+                        </div>
+                        <div id="fileList" class="file-list"></div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-submit">提交反馈</button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- 常见问题 -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                    <p>这里列出了一些用户经常遇到的问题</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何修改我的账户信息？</span>
+                            <i class="icon-arrow">▼</i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>登录后点击右上角头像，进入个人中心即可修改账户信息。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>忘记密码怎么办？</span>
+                            <i class="icon-arrow">▼</i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>点击登录页面的"忘记密���"，通过邮箱验证即可重置密码。</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <span>如何举报可疑信息？</span>
+                            <i class="icon-arrow">▼</i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>在帖子或评论右下角点击举报按钮，选择举报原因即可。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 关注我们 -->
+            <section class="follow-section">
+                <div class="section-header">
+                    <h2>关注我们</h2>
+                    <p>通过以下方式获取最新动态</p>
+                </div>
+
+                <div class="social-links">
+                    <div class="social-card">
+                        <div class="qrcode">
+                            <!-- 替换为实际的二维码图片 -->
+                            <img src="images/wechat-qr.png" alt="微信公众号">
+                        </div>
+                        <h3>微信公众号</h3>
+                        <p>扫码关注，获取更多防骗知识</p>
+                    </div>
+                    <div class="social-card">
+                        <div class="qrcode">
+                            <!-- 替换为实际的二维码图片 -->
+                            <img src="images/weibo-qr.png" alt="微博">
+                        </div>
+                        <h3>官方微博</h3>
+                        <p>实时动态，互动交流</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 在线客服模态框 -->
+    <div class="modal" id="chatModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>在线客服</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chatMessages">
+                        <!-- 消息将通过JavaScript动态添加 -->
+                    </div>
+                    <div class="chat-input">
+                        <textarea id="messageInput" placeholder="请输入您的问题..."></textarea>
+                        <button id="sendMessage">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 复用footer -->
+    <footer class="main-footer">
+        <!-- 与index.html相同的footer内容 -->
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html> 
