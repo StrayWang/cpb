@@ -7,24 +7,21 @@
     <title>诈骗查询 - 查骗吧</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P83ZKPPF');</script>
-<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPE39LJ3M3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPE39LJ3M3');
+</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P83ZKPPF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- 复用header -->
     <header class="main-header">
         <!-- 与index.html相同的header内容 -->
     </header>
-
     <main class="search-page">
         <div class="container">
             <!-- 搜索区域 -->
@@ -51,7 +48,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </ul>
                 </div>
             </section>
-
             <!-- 搜索结果区域 -->
             <section class="search-results" style="display: none;">
                 <div class="results-header">
@@ -60,7 +56,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         找到相关结果 <span id="resultCount">0</span> 条
                     </div>
                 </div>
-                
                 <div class="results-filter">
                     <div class="filter-group">
                         <label>时间范围：</label>
@@ -82,7 +77,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </select>
                     </div>
                 </div>
-
                 <div class="results-list" id="resultsList">
                     <!-- 结果项模板 -->
                     <div class="result-item">
@@ -108,7 +102,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </div>
-
                 <!-- 分页控件 -->
                 <div class="pagination">
                     <button class="page-btn" disabled>上一页</button>
@@ -122,7 +115,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <button class="page-btn">下一页</button>
                 </div>
             </section>
-
             <!-- 无结果提示 -->
             <section class="no-results" style="display: none;">
                 <div class="no-results-content">
@@ -142,12 +134,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </section>
         </div>
     </main>
-
     <!-- 复用footer -->
     <footer class="main-footer">
         <!-- 与index.html相同的footer内容 -->
     </footer>
-
     <script src="js/search.js"></script>
 </body>
 </html> 

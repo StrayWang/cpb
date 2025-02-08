@@ -7,31 +7,27 @@
     <title>诈骗预警 - 查骗吧</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/warning.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P83ZKPPF');</script>
-<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPE39LJ3M3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPE39LJ3M3');
+</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P83ZKPPF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- 复用header -->
     <header class="main-header">
         <!-- 与index.html相同的header内容 -->
     </header>
-
     <main class="warning-page">
         <div class="container">
             <!-- 预警头部 -->
             <section class="warning-header">
                 <h1>诈骗预警</h1>
                 <p class="subtitle">实时发布最新诈骗预警信息，提前识别风险</p>
-                
                 <!-- 预警统计 -->
                 <div class="warning-stats">
                     <div class="stat-item">
@@ -48,7 +44,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </section>
-
             <!-- 紧急预警 -->
             <section class="emergency-warning">
                 <div class="warning-card urgent">
@@ -70,7 +65,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </section>
-
             <!-- 预警筛选 -->
             <section class="warning-filter">
                 <div class="filter-group">
@@ -103,7 +97,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <button type="button">搜索</button>
                 </div>
             </section>
-
             <!-- 预警列表 -->
             <section class="warning-list">
                 <!-- 预警卡片示例 -->
@@ -128,10 +121,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </div>
                 </div>
-
                 <!-- 更多预警卡片 -->
             </section>
-
             <!-- 分页 -->
             <div class="pagination">
                 <button class="page-btn" disabled>上一页</button>
@@ -144,7 +135,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <button class="page-btn">下一页</button>
             </div>
-
             <!-- 订阅预警 -->
             <section class="warning-subscribe">
                 <div class="subscribe-card">
@@ -174,7 +164,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </section>
         </div>
     </main>
-
     <!-- 预警详情模态框 -->
     <div class="modal" id="warningModal">
         <div class="modal-content">
@@ -187,7 +176,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
-
     <!-- 分享模态框 -->
     <div class="modal" id="shareModal">
         <div class="modal-content">
@@ -217,12 +205,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
-
     <!-- 复用footer -->
     <footer class="main-footer">
         <!-- 与index.html相同的footer内容 -->
     </footer>
-
     <script src="js/warning.js"></script>
 </body>
 </html> 

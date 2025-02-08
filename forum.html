@@ -7,24 +7,21 @@
     <title>社区论坛 - 查骗吧</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/forum.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P83ZKPPF');</script>
-<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPE39LJ3M3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPE39LJ3M3');
+</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P83ZKPPF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- 复用header -->
     <header class="main-header">
         <!-- 与index.html相同的header内容 -->
     </header>
-
     <main class="forum-page">
         <div class="container">
             <!-- 论坛头部 -->
@@ -51,7 +48,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
             </section>
-
             <!-- 论坛主体 -->
             <div class="forum-content">
                 <!-- 左侧版块列表 -->
@@ -98,7 +94,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                     </nav>
                 </aside>
-
                 <!-- 右侧帖子列表 -->
                 <div class="forum-main">
                     <!-- 筛选器 -->
@@ -117,7 +112,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </select>
                         </div>
                     </div>
-
                     <!-- 帖子列表 -->
                     <div class="post-list">
                         <!-- 置顶帖子 -->
@@ -147,7 +141,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 </div>
                             </div>
                         </article>
-
                         <!-- 普通帖子 -->
                         <article class="post-item">
                             <div class="post-main">
@@ -183,7 +176,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </article>
                         <!-- 更多帖子 -->
                     </div>
-
                     <!-- 分页 -->
                     <div class="pagination">
                         <button class="page-btn" disabled>上一页</button>
@@ -200,7 +192,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </main>
-
     <!-- 发帖模态框 -->
     <div class="modal" id="newPostModal">
         <div class="modal-content">
@@ -241,12 +232,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </div>
-
     <!-- 复用footer -->
     <footer class="main-footer">
         <!-- 与index.html相同的footer内容 -->
     </footer>
-
     <script src="js/forum.js"></script>
 </body>
 </html> 

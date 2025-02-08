@@ -7,34 +7,29 @@
     <title>举报成功 - 查骗吧</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/report-success.css">
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P83ZKPPF');</script>
-<!-- End Google Tag Manager -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LPE39LJ3M3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LPE39LJ3M3');
+</script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P83ZKPPF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- 复用header -->
     <header class="main-header">
         <!-- 与index.html相同的header内容 -->
     </header>
-
     <main class="success-page">
         <div class="container">
             <div class="success-card">
                 <!-- 成功图标 -->
                 <div class="success-icon">✓</div>
-                
                 <!-- 成功信息 -->
                 <h1>举报提交成功</h1>
                 <p class="report-number">举报编号：<span id="reportId">2024032012345</span></p>
-                
                 <!-- 处理进度 -->
                 <div class="progress-steps">
                     <div class="step active">
@@ -58,7 +53,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <div class="step-time">-</div>
                     </div>
                 </div>
-
                 <!-- 提示信息 -->
                 <div class="notice-box">
                     <h3>温馨提示</h3>
@@ -69,14 +63,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <li>您也可以随时登录平台查看处理进度</li>
                     </ul>
                 </div>
-
                 <!-- 操作按钮 -->
                 <div class="action-buttons">
                     <button class="btn-copy" onclick="copyReportId()">复制举报编号</button>
                     <button class="btn-track" onclick="window.location.href='/report-track'">追踪进度</button>
                     <button class="btn-home" onclick="window.location.href='/'">返回首页</button>
                 </div>
-
                 <!-- 紧急提示 -->
                 <div class="emergency-notice">
                     <h3>紧急情况处理</h3>
@@ -101,12 +93,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </main>
-
     <!-- 复用footer -->
     <footer class="main-footer">
         <!-- 与index.html相同的footer内容 -->
     </footer>
-
     <script src="../js/report-success.js"></script>
 </body>
 </html> 
